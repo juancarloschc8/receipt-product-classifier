@@ -23,10 +23,11 @@ Since real receipt data is proprietary, I built a *Data Augmentation Engine* (sr
 ### 2. Model Comparison
 We benchmarked two architectures to find the optimal balance between accuracy and computational cost:
 
-| Approach | Technology | Pros | Cons |
-|dev       |---         |---   |---|
-| *Baseline* | TF-IDF + Random Forest | Ultra-fast inference (<5ms), Low CPU usage. | Struggles with completely unseen abbreviations. |
-| *Challenger* | DistilBERT Embeddings + Logistic Regression | Context-aware, Semantic understanding. | High latency (~50ms), Requires heavy RAM/GPU. |
+
+| Approach      | Technology                                | Pros                                           | Cons                                           |
+|--------------|-------------------------------------------|-----------------------------------------------|-----------------------------------------------|
+| *Baseline*   | TF-IDF + Random Forest                   | Ultra-fast inference (<5ms), Low CPU usage.  | Struggles with completely unseen abbreviations. |
+| *Challenger* | DistilBERT Embeddings + Logistic Regression | Context-aware, Semantic understanding.       | High latency (~50ms), Requires heavy RAM/GPU. |
 
 ## Key Findings
 * The **DistilBERT** model achieved slightly higher accuracy (+3%) by understanding semantic context.
